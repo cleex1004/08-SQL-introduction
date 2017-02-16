@@ -13,7 +13,7 @@ Article.all = [];
 
 // ++++++++++++++++++++++++++++++++++++++
 
-// REVIEW: We will be writing documentation today for the methods in this file that handles Model layer of our application. As an example, here is documentation for Article.prototype.toHtml(). You will provide documentation for the other methods in this file in the same structure as the following example. In addition, where there are TODO comment lines inside of the method, describe what the following code is doing (down to the next TODO) and change the TODO into a DONE when finished.
+// REVIEW: We will be writing documentation today for the methods in this file that handles Model layer of our application. As an example, here is documentation for Article.prototype.toHtml(). You will provide documentation for the other methods in this file in the same structure as the following example. In addition, where there are TO DO comment lines inside of the method, describe what the following code is doing (down to the next TO DO) and change the TO DO into a DONE when finished.
 
 /**
  * OVERVIEW of Article.prototype.toHtml():
