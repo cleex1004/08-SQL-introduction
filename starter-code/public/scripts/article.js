@@ -115,7 +115,7 @@ Article.truncateTable = function(callback) {
     url: '/articles',
     method: 'DELETE',
   })
-  // DONE: when ajax call completed logs data that was deleted and runs callback function if there is one
+  // DONE: when ajax call completed logs data which is response and runs callback function if there is one
   .then(function(data) {
     console.log(data);
     if (callback) callback();
@@ -134,7 +134,7 @@ Article.truncateTable = function(callback) {
 Article.prototype.insertRecord = function(callback) {
   // DONE: jquery ajax call that creates an instance of an article in DB
   $.post('/articles', {author: this.author, authorUrl: this.authorUrl, body: this.body, category: this.category, publishedOn: this.publishedOn, title: this.title})
-  // DONE: when ajax call completed logs data that was inserted and runs callback function if there is one
+  // DONE: when ajax call completed logs data which is response and runs callback function if there is one
   .then(function(data) {
     console.log(data);
     if (callback) callback();
@@ -156,7 +156,7 @@ Article.prototype.deleteRecord = function(callback) {
     url: `/articles/${this.article_id}`,
     method: 'DELETE'
   })
-  // DONE: when ajax call completed logs data that was deleted and runs callback function if there is one
+  // DONE: when ajax call completed logs data which is response and runs callback function if there is one
   .then(function(data) {
     console.log(data);
     if (callback) callback();
@@ -186,7 +186,7 @@ Article.prototype.updateRecord = function(callback) {
       title: this.title
     }
   })
-  // DONE: when ajax call completed logs data that was updated and runs callback function if there is one
+  // DONE: when ajax call completed logs data which is response and runs callback function if there is one
   .then(function(data) {
     console.log(data);
     if (callback) callback();

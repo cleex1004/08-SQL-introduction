@@ -75,14 +75,16 @@ app.put('/articles/:id', function(request, response) {
         "authorUrl" = $3,
         category = $4,
         "publishedOn" = $5,
-        body = $6;`, // DONE: Write the SQL query to update an existing record
+        body = $6,
+    WHERE article_id = $7;`, // DONE: Write the SQL query to update an existing record
     [
       request.body.title,
       request.body.author,
       request.body.authorUrl,
       request.body.category,
       request.body.publishedOn,
-      request.body.body
+      request.body.body,
+      request.params.id
     ] // DONE: Get each value from the request's body
   );
   response.send('update complete');
@@ -91,7 +93,7 @@ app.put('/articles/:id', function(request, response) {
 app.delete('/articles/:id', function(request, response) {
   client.query(
     `DELETE FROM articles
-    WHERE article.id = $1;`, // DONE: Write the SQL query to delete a record
+    WHERE article_id = $1;`, // DONE: Write the SQL query to delete a record
     [request.params.id]
   );
   response.send('Delete complete');
